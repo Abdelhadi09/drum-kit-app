@@ -1,5 +1,5 @@
 // Listen for keyboard presses
-document.addEventListener("keypress", function(event) {
+document.addEventListener("keypress", function (event) {
   var keyPressed = event.key;
   playSound(keyPressed);
   console.log("Key pressed: " + keyPressed);
@@ -13,11 +13,11 @@ document.addEventListener("keypress", function(event) {
  * @param {NodeList} buttons - A NodeList of buttons with the class "drum"
  */
 function addClickListeners(buttons) {
-  buttons.forEach(function(button) {
-    button.addEventListener("click", function() {
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
       var buttonInnerHTML = this.innerHTML;
       playSound(buttonInnerHTML);
-      console.log("Button clicked: " + buttonInnerHTML);
+     
     });
   });
 }
